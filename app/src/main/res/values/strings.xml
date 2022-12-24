@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Cleaner For Telegram</string>
+    <string name="images">Images</string>
+    <string name="videos">Videos</string>
+    <string name="documents">Documents</string>
+    <string name="audios">Audios</string>
+    <string name="howToUseVideoURL">https://bit.ly/cleanerForTelegram</string>
+    <string name="ratingURL">https://play.google.com/store/apps/details?id=com.akshaymethaniya.tgfilemanager</string>
+</resources>

@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollViewID"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+        <!--    <androidx.cardview.widget.CardView-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:layout_marginStart="10dp"-->
+        <!--        android:layout_marginTop="10dp"-->
+        <!--        android:layout_marginEnd="10dp"-->
+        <!--        app:cardCornerRadius="8dp">-->
+        <!--        <RelativeLayout-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_gravity="center_vertical"-->
+        <!--            android:background="@drawable/bg5"-->
+        <!--            android:gravity="center_vertical"-->
+        <!--            android:padding="15dp">-->
+        <!--&lt;!&ndash;            <com.github.mikephil.charting.charts.PieChart&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:id = "@+id/pieChart"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:layout_gravity="center"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:layout_width = "match_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;                android:layout_height = "150dp" />&ndash;&gt;-->
+        <!--            <RelativeLayout-->
+        <!--                android:id="@+id/detailsLayout"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_below="@id/pieChart"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_centerInParent="true"-->
+        <!--                android:layout_gravity="center_vertical"-->
+        <!--                android:gravity="center_vertical">-->
+        <!--                <TextView-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:textSize="20sp"-->
+        <!--                    android:id="@+id/overallLabel"-->
+        <!--                    android:textAllCaps="true"-->
+        <!--                    android:textStyle="bold"-->
+        <!--                    android:textColor="@color/white"-->
+        <!--                    android:text="Overall"/>-->
+        <!--                <TextView-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:id="@+id/totalOverallFilesCountLabel"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:text="0 Files"-->
+        <!--                    android:textColor="@color/white"-->
+        <!--                    android:textSize="15sp"-->
+        <!--                    android:textStyle="bold"-->
+        <!--                    android:layout_below="@+id/overallLabel"/>-->
+        <!--                <TextView-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:id="@+id/totalOverallFilesSizeLabel"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:text="0 B"-->
+        <!--                    android:layout_marginLeft="20dp"-->
+        <!--                    android:textColor="@color/white"-->
+        <!--                    android:textSize="15sp"-->
+        <!--                    android:textStyle="bold"-->
+        <!--                    android:layout_below="@+id/overallLabel"-->
+        <!--                    android:layout_toRightOf="@+id/totalOverallFilesCountLabel"-->
+        <!--                    />-->
+        <!--            </RelativeLayout>-->
+        <!--            <Button-->
+        <!--                android:id="@+id/deleteData"-->
+        <!--                android:layout_alignEnd="@+id/detailsLayout"-->
+        <!--                android:layout_alignRight="@+id/detailsLayout"-->
+        <!--                android:layout_alignParentEnd="true"-->
+        <!--                android:layout_below="@id/pieChart"-->
+        <!--                android:layout_alignParentRight="true"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:text="Clear All"-->
+        <!--                />-->
+        <!--        </RelativeLayout>-->
+        <!--    </androidx.cardview.widget.CardView>-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="8dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/bg1"
+                android:gravity="center_vertical"
+                android:padding="15dp">
+
+                <RelativeLayout
+                    android:id="@+id/imagesLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/imageTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:text="IMAGES"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <!--                <TextView-->
+                    <!--                    android:id="@+id/totalTelegramImagesFiles"-->
+                    <!--                    android:layout_width="wrap_content"-->
+                    <!--                    android:layout_height="wrap_content"-->
+                    <!--                    android:layout_below="@+id/imageTitle"-->
+                    <!--                    android:layout_alignParentStart="true"-->
+                    <!--                    android:layout_alignParentLeft="true"-->
+                    <!--                    android:text="0 Files"-->
+                    <!--                    android:textColor="@color/white"-->
+                    <!--                    android:textSize="15sp"-->
+                    <!--                    android:textStyle="bold" />-->
+                    <!--                <TextView-->
+                    <!--                    android:id="@+id/totalTelegramImagesSize"-->
+                    <!--                    android:layout_width="wrap_content"-->
+                    <!--                    android:layout_height="wrap_content"-->
+                    <!--                    android:layout_below="@+id/imageTitle"-->
+                    <!--                    android:layout_marginLeft="20dp"-->
+                    <!--                    android:layout_toRightOf="@+id/totalTelegramImagesFiles"-->
+                    <!--                    android:text="0 B"-->
+                    <!--                    android:textColor="@color/white"-->
+                    <!--                    android:textSize="15sp"-->
+                    <!--                    android:textStyle="bold"/>-->
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignEnd="@+id/imagesLayout"
+                    android:layout_alignRight="@+id/imagesLayout"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/images_icon" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:elevation="15dp"
+            app:cardCornerRadius="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/bg2"
+                android:gravity="center_vertical"
+                android:padding="15dp">
+
+                <RelativeLayout
+                    android:id="@+id/videosLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/videoTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:text="VIDEOS"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <!--                <TextView-->
+                    <!--                    android:id="@+id/totalTelegramVideosFiles"-->
+                    <!--                    android:layout_width="wrap_content"-->
+                    <!--                    android:layout_height="wrap_content"-->
+                    <!--                    android:layout_below="@+id/videoTitle"-->
+                    <!--                    android:layout_alignParentStart="true"-->
+                    <!--                    android:layout_alignParentLeft="true"-->
+                    <!--                    android:text="0 Files"-->
+                    <!--                    android:textColor="@color/white"-->
+                    <!--                    android:textSize="15sp"-->
+                    <!--                    android:textStyle="bold" />-->
+                    <!--                <TextView-->
+                    <!--                    android:id="@+id/totalTelegramVideosSize"-->
+                    <!--                    android:layout_width="wrap_content"-->
+                    <!--                    android:layout_height="wrap_content"-->
+                    <!--                    android:layout_below="@+id/videoTitle"-->
+                    <!--                    android:layout_marginLeft="20dp"-->
+                    <!--                    android:layout_toRightOf="@+id/totalTelegramVideosFiles"-->
+                    <!--                    android:text="0 B"-->
+                    <!--                    android:textColor="@color/white"-->
+                    <!--                    android:textSize="15sp"-->
+                    <!--                    android:textStyle="bold"/>-->
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignEnd="@+id/videosLayout"
+                    android:layout_alignRight="@+id/videosLayout"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_videos_icon" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:elevation="15dp"
+            app:cardCornerRadius="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/bg3"
+                android:gravity="center_vertical"
+                android:padding="15dp">
+
+                <RelativeLayout
+                    android:id="@+id/audiosLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/audioTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:text="AUDIOS"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                    <!--                <TextView-->
+                    <!--                    android:id="@+id/totalTelegramAudiosFiles"-->
+                    <!--                    android:layout_width="wrap_content"-->
+                    <!--                    android:layout_height="wrap_content"-->
+                    <!--                    android:layout_below="@+id/audioTitle"-->
+                    <!--                    android:layout_alignParentStart="true"-->
+                    <!--                    android:layout_alignParentLeft="true"-->
+                    <!--                    android:text="0 Files"-->
+                    <!--                    android:textColor="@color/white"-->
+                    <!--                    android:textSize="15sp"-->
+                    <!--                    android:textStyle="bold" />-->
+                    <!--                <TextView-->
+                    <!--                    android:id="@+id/totalTelegramAudiosSize"-->
+                    <!--                    android:layout_width="wrap_content"-->
+                    <!--                    android:layout_height="wrap_content"-->
+                    <!--                    android:layout_below="@+id/audioTitle"-->
+                    <!--                    android:layout_marginLeft="20dp"-->
+                    <!--                    android:layout_toRightOf="@+id/totalTelegramAudiosFiles"-->
+                    <!--                    android:text="0 B"-->
+                    <!--                    android:textColor="@color/white"-->
+                    <!--                    android:textSize="15sp"-->
+                    <!--                    android:textStyle="bold"/>-->
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignEnd="@+id/audiosLayout"
+                    android:layout_alignRight="@+id/audiosLayout"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/music_icon" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:elevation="15dp"
+            app:cardCornerRadius="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/bg4"
+                android:gravity="center_vertical"
+                android:padding="15dp">
+
+                <RelativeLayout
+                    android:id="@+id/documentsLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/documentTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:text="DOCUMENTS"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <!--                <TextView-->
+                    <!--                    android:id="@+id/totalTelegramDocumentFiles"-->
+                    <!--                    android:layout_width="wrap_content"-->
+                    <!--                    android:layout_height="wrap_content"-->
+                    <!--                    android:layout_below="@+id/documentTitle"-->
+                    <!--                    android:layout_alignParentStart="true"-->
+                    <!--                    android:layout_alignParentLeft="true"-->
+                    <!--                    android:text="0 Files"-->
+                    <!--                    android:textColor="@color/white"-->
+                    <!--                    android:textSize="15sp"-->
+                    <!--                    android:textStyle="bold" />-->
+                    <!--                <TextView-->
+                    <!--                    android:id="@+id/totalTelegramDocumentSize"-->
+                    <!--                    android:layout_width="wrap_content"-->
+                    <!--                    android:layout_height="wrap_content"-->
+                    <!--                    android:layout_below="@+id/documentTitle"-->
+                    <!--                    android:layout_marginLeft="20dp"-->
+                    <!--                    android:layout_toRightOf="@+id/totalTelegramDocumentFiles"-->
+                    <!--                    android:text="0 B"-->
+                    <!--                    android:textColor="@color/white"-->
+                    <!--                    android:textSize="15sp"-->
+                    <!--                    android:textStyle="bold"/>-->
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignEnd="@+id/documentsLayout"
+                    android:layout_alignRight="@+id/documentsLayout"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_documents_icon" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+<!--        <View-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="5dp"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginEnd="10dp"-->
+<!--            android:background="@drawable/bg7"/>-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:elevation="15dp"
+            app:cardCornerRadius="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/bg5"
+                android:gravity="center_vertical"
+                android:padding="15dp">
+
+                <RelativeLayout
+                    android:id="@+id/howtoUse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/howtoUseTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:text="HOW TO USE"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/question_mark_icon" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:elevation="15dp"
+            app:cardCornerRadius="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/bg6"
+                android:gravity="center_vertical"
+                android:padding="15dp">
+
+                <RelativeLayout
+                    android:id="@+id/rateUsLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/rateUsTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:text="RATE US"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <!--                <TextView-->
+                    <!--                    android:id="@+id/totalTelegramDocumentFiles"-->
+                    <!--                    android:layout_width="wrap_content"-->
+                    <!--                    android:layout_height="wrap_content"-->
+                    <!--                    android:layout_below="@+id/documentTitle"-->
+                    <!--                    android:layout_alignParentStart="true"-->
+                    <!--                    android:layout_alignParentLeft="true"-->
+                    <!--                    android:text="0 Files"-->
+                    <!--                    android:textColor="@color/white"-->
+                    <!--                    android:textSize="15sp"-->
+                    <!--                    android:textStyle="bold" />-->
+                    <!--                <TextView-->
+                    <!--                    android:id="@+id/totalTelegramDocumentSize"-->
+                    <!--                    android:layout_width="wrap_content"-->
+                    <!--                    android:layout_height="wrap_content"-->
+                    <!--                    android:layout_below="@+id/documentTitle"-->
+                    <!--                    android:layout_marginLeft="20dp"-->
+                    <!--                    android:layout_toRightOf="@+id/totalTelegramDocumentFiles"-->
+                    <!--                    android:text="0 B"-->
+                    <!--                    android:textColor="@color/white"-->
+                    <!--                    android:textSize="15sp"-->
+                    <!--                    android:textStyle="bold"/>-->
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignEnd="@+id/rateUsLayout"
+                    android:layout_alignRight="@+id/rateUsLayout"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/rate_us_icon" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-3913368499058974/3747474719" />
+    </LinearLayout>
+</ScrollView>

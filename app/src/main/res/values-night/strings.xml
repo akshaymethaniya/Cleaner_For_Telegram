@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="images">Images</string>
+    <string name="videos">Videos</string>
+    <string name="documents">Documents</string>
+    <string name="audios">Audios</string>
+    <string name="howToUseVideoURL">https://bit.ly/cleanerForTelegram</string>
+</resources>
